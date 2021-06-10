@@ -73,7 +73,7 @@
                 					echo "<div id='logSucess' class='col-12'><h1> LOGADO COM SUCESSO</h1></div>";
                 					$parada = true;
                 					break;
-                				}else{
+                				}elseif("$emailLogin|$passwordLogin"!="$valor[$i]" and $loginIsMd5==true and isset($_POST['enviarLogin'])){
                 					echo "<div id='logFailure' class='col-12'><h1>ERRO! email ou senha incorretos tente novamente </h1></div>";
                 					break;
                 					
@@ -103,7 +103,6 @@
                     <input id="inputEmail" class="col-9 input" type="email" name="email">
                     <label for="password" class="label">senha:</label>
                     <input id="password" class="col-9 input" type="password" name="password" pattern="^[a-zA-Z0-9]+$">
-                    <!--(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}-->
                     <input class="col-5 enviar" id="enviarRegistro" type="submit" name="enviarRegistro" value="enviar">
                 </form>
             </div>
@@ -119,7 +118,7 @@
             </div>
         </main>
         <footer id="footer">
-            <p>Kauê Delgado Pereira © <a href="mailto:kaue-dpereira1@educar.rs.gov.br">email</a></p>
+            <p>Kauê Delgado Pereira - 2021 © <a href="mailto:kaue-dpereira1@educar.rs.gov.br">email</a></p>
         </footer>
         <script type="text/javascript" src="script/script.js"></script>
     </body>
